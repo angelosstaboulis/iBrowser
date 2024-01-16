@@ -9,25 +9,12 @@ import UIKit
 import CoreData
 class BookmarksViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
-    func fetchBookmarks()->[NSFetchRequestResult]{
-        let delegate = UIApplication.shared.delegate as! AppDelegate
-        let context = delegate.persistentContainer.viewContext
-        var objects:[NSFetchRequestResult] = []
-        do{
-            let requests = iBrowser.Bookmarks.fetchRequest()
-            objects = try context.fetch(requests)
-           
-        }catch{
-            debugPrint("something went wrong!!!!!")
-        }
-        return objects
-    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fetchBookmarks().count
+        return BookmarksViewModel.shared.fetchBookmarks().count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let items = fetchBookmarks() as! [iBrowser.Bookmarks]
+        let items = BookmarksViewModel.shared.fetchBookmarks() as! [iBrowser.Bookmarks]
         if indexPath.row < items.count  {
             cell.textLabel!.text =  items[indexPath.row].url
         }

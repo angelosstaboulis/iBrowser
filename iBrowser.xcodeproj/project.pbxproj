@@ -18,6 +18,8 @@
 		D68CBC792B54279900565DD1 /* iBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CBC782B54279900565DD1 /* iBrowserTests.swift */; };
 		D68CBC832B54279900565DD1 /* iBrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CBC822B54279900565DD1 /* iBrowserUITests.swift */; };
 		D68CBC852B54279900565DD1 /* iBrowserUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CBC842B54279900565DD1 /* iBrowserUITestsLaunchTests.swift */; };
+		D69B46182B56F74700B3CF36 /* BookmarksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B46172B56F74700B3CF36 /* BookmarksViewModel.swift */; };
+		D69B461C2B56FCC700B3CF36 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69B461B2B56FCC700B3CF36 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		D68CBC7E2B54279900565DD1 /* iBrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iBrowserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68CBC822B54279900565DD1 /* iBrowserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBrowserUITests.swift; sourceTree = "<group>"; };
 		D68CBC842B54279900565DD1 /* iBrowserUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBrowserUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D69B46172B56F74700B3CF36 /* BookmarksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewModel.swift; sourceTree = "<group>"; };
+		D69B461B2B56FCC700B3CF36 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +107,16 @@
 		D68CBC5D2B54279600565DD1 /* iBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				D69B461A2B56FCB300B3CF36 /* Helper */,
+				D69B46192B56F92800B3CF36 /* Model */,
+				D69B46162B56F73200B3CF36 /* ViewModel */,
+				D69B46152B56F6E000B3CF36 /* View */,
 				D68CBC5E2B54279600565DD1 /* AppDelegate.swift */,
 				D68CBC602B54279600565DD1 /* SceneDelegate.swift */,
-				D68CBC622B54279600565DD1 /* ViewController.swift */,
 				D68CBC642B54279600565DD1 /* Main.storyboard */,
 				D68CBC6A2B54279900565DD1 /* Assets.xcassets */,
 				D68CBC6C2B54279900565DD1 /* LaunchScreen.storyboard */,
 				D68CBC6F2B54279900565DD1 /* Info.plist */,
-				D68CBC672B54279600565DD1 /* iBrowser.xcdatamodeld */,
-				D683F8112B54747A003A220F /* BookmarksViewController.swift */,
 			);
 			path = iBrowser;
 			sourceTree = "<group>";
@@ -131,6 +136,39 @@
 				D68CBC842B54279900565DD1 /* iBrowserUITestsLaunchTests.swift */,
 			);
 			path = iBrowserUITests;
+			sourceTree = "<group>";
+		};
+		D69B46152B56F6E000B3CF36 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D68CBC622B54279600565DD1 /* ViewController.swift */,
+				D683F8112B54747A003A220F /* BookmarksViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D69B46162B56F73200B3CF36 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D69B46172B56F74700B3CF36 /* BookmarksViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		D69B46192B56F92800B3CF36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D68CBC672B54279600565DD1 /* iBrowser.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D69B461A2B56FCB300B3CF36 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D69B461B2B56FCC700B3CF36 /* Helper.swift */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +303,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D683F8122B54747A003A220F /* BookmarksViewController.swift in Sources */,
+				D69B461C2B56FCC700B3CF36 /* Helper.swift in Sources */,
 				D68CBC632B54279600565DD1 /* ViewController.swift in Sources */,
+				D69B46182B56F74700B3CF36 /* BookmarksViewModel.swift in Sources */,
 				D68CBC5F2B54279600565DD1 /* AppDelegate.swift in Sources */,
 				D68CBC692B54279600565DD1 /* iBrowser.xcdatamodeld in Sources */,
 				D68CBC612B54279600565DD1 /* SceneDelegate.swift in Sources */,
